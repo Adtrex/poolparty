@@ -95,9 +95,23 @@ License: https://webthemez.com/license
 		 
 		      <div class="container"></div>
         <div class="form"> 
+
 		  
 		   <!-- Form itself -->
-          <center><form name="sentMessage" class="well" id="RegisterForm" action="processbill.php" method="post" novalidate> 
+          <center>
+            <h1 style="color: green">
+            <?php
+        if( isset($_SESSION['Success']) )
+{
+        echo $_SESSION['Success'];
+
+        unset($_SESSION['Success']);
+
+}
+?>
+</h1>
+          
+          <form name="sentMessage" class="well" id="RegisterForm" action="processbill.php" method="post" novalidate> 
 		 <div class="control-group">
                    <div class="form-group">
 			<input type="text" class="form-control" 

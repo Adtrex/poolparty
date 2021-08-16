@@ -57,7 +57,9 @@ if(isset($_GET['status']))
 			"CC: tolu@snh.org";
 			$try = mail($email,$subject,$message,$headers);*/
 
-			//header("Location: index.php");
+            $_SESSION['Success'] = "Payment successful Check your email for more info";
+
+			header("Location: index.php#RegisterForm");
               }
               else
               {
