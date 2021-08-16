@@ -8,7 +8,7 @@ License: https://webthemez.com/license
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Party Bootstrap 4 Website Template</title>
+  <title>POOL PARTY</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -40,21 +40,7 @@ License: https://webthemez.com/license
   <!--==========================
     Top Bar
   ============================-->
-  <section id="topbar" class="d-none d-lg-block">
-    <div class="container clearfix">
-      <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">name@websitename.com</a>
-        <i class="fa fa-phone"></i> +1 2345 67855 22
-      </div>
-      <div class="social-links float-right">
-        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
+  
 
   <!--==========================
     Header
@@ -63,20 +49,14 @@ License: https://webthemez.com/license
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><span><i class="fa fa-bolt" aria-hidden="true"></i></span>PARTY</a></h1> 
+        <h1><a href="#body" class="scrollto"><span><i class="fa fa-bolt" aria-hidden="true"></i></span>POOL PARTY</a></h1> 
         <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="#services">We Do</a></li>
-          <li><a href="#about">Who We</a></li>
-          <li><a href="#portfolio">Gallery</a></li>
-          <li><a href="#event">Events</a></li>
-          <li><a href="#team">Team</a></li> 
-		  <li><a href="#price">Price</a></li>
-          <li><a href="#contact">Contact</a></li>
+          
+		  
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
