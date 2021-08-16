@@ -1,6 +1,6 @@
 <?php session_start();
 
-include_once('dbConnection.php');
+
 
 
 $email = $_SESSION["email"];
@@ -43,13 +43,40 @@ if(isset($_GET['status']))
               $res = json_decode($response);
               if($res->status)
               {
+
+                
                 $amount = $res->data->meta->price;
+
+                $image = 'https://res.cloudinary.com/de8awjxjn/image/upload/v1629141772/invite.jpg';
+
+                $subject = "Orange Card Festival Booking Confirmation
+			";
+$message .= "Congratulations ". $first_name ." ". $last_name . " you have successfully registered for the pool party at Mondroy Hotel & Suites on the 20th of Agust 20121";
+$message .= '<img src="'. $image.'">';
+			$from_mail = "no-reply@techunknown.com";
+			$from_name = "PHYSICS POOL PARTY";
+
+$headers = "From: ".$from_name." <".$from_mail.">\n";
+$headers .= "CC: pooleventphysics@gmail.com  ";
+
+			
+			$try = mail($email,$subject,$message,$headers);
+			if($try){
+				
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+  window.alert('Registration Succesful. Check your email for update')
+  window.location.href='index.php';
+  </SCRIPT>"); 
+			}else{
+				echo "Email Not Sending";
+
+			}
                 
                     //insert data to table    
-            mysqli_query($conn, "
+            /*mysqli_query($conn, "
             INSERT INTO `Events`(`id`, `first_name`, `last_name`, `gender`, `email`, `amount`, `date`) VALUES 
                 (NULL, '".$first_name."', '".$last_name."', '".$gender."', '".$email."','".$amount."', CURRENT_TIMESTAMP)          
-            ");
+            ");*/
 
 			/*$subject = "Bill payment Successful";
 			$message = "You have successfully made your payment";
@@ -57,9 +84,7 @@ if(isset($_GET['status']))
 			"CC: tolu@snh.org";
 			$try = mail($email,$subject,$message,$headers);*/
 
-            $_SESSION['Success'] = "Payment successful Check your email for more info";
-
-			header("Location: index.php#RegisterForm");
+            
               }
               else
               {
